@@ -1,18 +1,19 @@
-import java.util.Scanner;
-public class Main{
+class Main {
+    private String nome;
+    int x, y, z;
+    //construtor
+
+    Main(){
+        System.out.println("Construtor chamado:");
+        nome = "Programa Java";
+        x = 5;
+        y = 6;
+        z = x+y;
+    }
+
     public static void main(String[] args){
-        Scanner myObj = new Scanner (System.in);
-        System.out.println ("Programa lados de um retângulo.");
-        System.out.println ("Insira a base: \n");
-        Double base = myObj.nextDouble();
-        System.out.println ("Insira a altura: \n");
-        Double alt = myObj.nextDouble();
-
-        System.out.println ("Área do retângulo: " + base* alt);
-
-        myObj.close();
-
-        
-        
+        Main obj = new Main();
+        System.out.println("Qual construtor foi chamado?" + obj.nome);
+        System.out.println(obj.z);
     }
 }
