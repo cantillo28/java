@@ -1,19 +1,12 @@
-class Main {
-    private String nome;
-    int x, y, z;
-    //construtor
+import javax.swing.JOptionPane;
 
-    Main(){
-        System.out.println("Construtor chamado:");
-        nome = "Programa Java";
-        x = 5;
-        y = 6;
-        z = x+y;
-    }
+public class Main {
+  public static void main(String[] args) {
+    float nota1, nota2, media;
+    nota1 = Float.parseFloat(JOptionPane.showInputDialog("Nota 1"));
+    nota2 = Float.parseFloat(JOptionPane.showInputDialog("Nota 2"));
+    media = (nota1 + nota2) / 2;
+    JOptionPane.showMessageDiaLog(null, "Média Final: " + media, "Média", JOptionPane._MESSAGE);
 
-    public static void main(String[] args){
-        Main obj = new Main();
-        System.out.println("Qual construtor foi chamado?" + obj.nome);
-        System.out.println(obj.z);
-    }
+  }
 }
